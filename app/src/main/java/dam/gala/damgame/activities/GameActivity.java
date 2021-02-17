@@ -22,6 +22,7 @@ import com.example.damgame.R;
 
 import java.util.ArrayList;
 
+import dam.gala.damgame.comm.MailClient;
 import dam.gala.damgame.controllers.AudioController;
 import dam.gala.damgame.fragments.QuestionDialogFragment;
 import dam.gala.damgame.interfaces.InterfaceDialog;
@@ -77,6 +78,14 @@ public class GameActivity extends AppCompatActivity implements InterfaceDialog {
             @Override
             public void onClick(View view) {
                 startGame();
+            }
+        });
+
+        Button btCorreo = findViewById(R.id.btnMail);
+        btCorreo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MailClient.enviarCorreoSsl("windtumbleweedspain@gmail.com", "PruebaProyectoClaseDesierto", "windtumbleweedspain@gmail.com", "Prueba de envio", "Cuerpo de prueba del evnío");
             }
         });
 

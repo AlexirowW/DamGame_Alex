@@ -42,10 +42,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_volcano"
+            android:rotationX="-360"
+            android:rotationY="360"
             android:text="@string/iniciar_juego"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textColorHighlight="#000000"
-            android:textColorHint="#000000" />
+            android:textColorHint="#000000"
+            app:backgroundTint="?attr/colorError" />
 
     </LinearLayout>
 
