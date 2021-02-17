@@ -85,6 +85,7 @@ public class GameActivity extends AppCompatActivity implements InterfaceDialog {
                 GameActivity.this.gameView.endGame(true);
                 finish();
                 System.exit(0);
+
             }
         };
         getOnBackPressedDispatcher().addCallback(this, callback);
