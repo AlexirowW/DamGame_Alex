@@ -1,5 +1,10 @@
 package dam.gala.damgame.data;
 
-public class DatabaseManager {
+import android.database.sqlite.SQLiteDatabase;
 
+public class DatabaseManager {
+    private SQLiteDatabase sqLiteDatabase;
+        public DatabaseManager(DatabaseHelper databaseHelper){
+            this.sqLiteDatabase = databaseHelper.getWritableDatabase();
+        }
 }
