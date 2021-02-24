@@ -2,6 +2,7 @@ package dam.gala.damgame.activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,6 +25,7 @@ import java.util.ArrayList;
 
 import dam.gala.damgame.comm.MailClient;
 import dam.gala.damgame.controllers.AudioController;
+import dam.gala.damgame.data.DatabaseHelper;
 import dam.gala.damgame.fragments.QuestionDialogFragment;
 import dam.gala.damgame.interfaces.InterfaceDialog;
 import dam.gala.damgame.model.GameConfig;
@@ -72,6 +74,9 @@ public class GameActivity extends AppCompatActivity implements InterfaceDialog {
         super.onCreate(savedInstanceState);
         setTema();
         setContentView(R.layout.activity_main);
+        DatabaseHelper dh = new DatabaseHelper(this, "bbdddamgame.db", null, 1);
+        SQLiteDatabase sqLiteDatabase = dh.getWritableDatabase();
+
         Button btIniciar;
         btIniciar = findViewById(R.id.btnIniciar);
         btIniciar.setOnClickListener(new View.OnClickListener() {

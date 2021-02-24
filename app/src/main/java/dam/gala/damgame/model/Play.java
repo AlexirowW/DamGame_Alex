@@ -29,6 +29,8 @@ public class Play {
     private Scene scene;
     private Player player;
     private GameConfig config;
+    private int landCrashed = 0;
+    private int blockCrashed = 0;
     private int questionsCaptured = 0;
     private int questionsCreated = 0;
     private int crashBlockCreated = 0;

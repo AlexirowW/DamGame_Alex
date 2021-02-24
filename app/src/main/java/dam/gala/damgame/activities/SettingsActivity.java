@@ -71,7 +71,7 @@ public class SettingsActivity extends AppCompatActivity {
      * Obtiene el tema de las preferencias del juego y lo asigna como tema de la actividad
      */
     private void setTema(){
-        int sceneCode = Integer.valueOf(getDefaultSharedPreferences(this).getString("theme_setting","100"));
+        int sceneCode = Integer.valueOf(getDefaultSharedPreferences(this).getString("theme_setting","106"));
         switch(sceneCode){
             case GameUtil.TEMA_DESIERTO:
                 setTheme(R.style.Desert_DamGame);
